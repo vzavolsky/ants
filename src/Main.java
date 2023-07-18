@@ -18,8 +18,6 @@ public class Main {
             right = params[example][1];
             plank = params[example][2];
 
-            int stepCounter = 0;
-
             if ((plank > Math.pow(10, 4) || plank < 1)
                     || (left > plank || left < 1)
                     || (right > plank || right < 1)
@@ -27,6 +25,8 @@ public class Main {
                 System.out.printf("Example #%d: условия заданы не корректно.\n", example + 1);
                 continue;
             }
+
+            int stepCounter = 0;
 
             for (int i = 1; i <= plank; i++) {
                 if (left > right && left - right == 1) {
